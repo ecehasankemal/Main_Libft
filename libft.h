@@ -15,6 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
+# include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 3
@@ -73,5 +75,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // get_next_line
 
 char	*ft_get_next_line(int fd);
+char	*ft_gets(char *line, int fd);
+
+// ft_printf
+
+int		ft_printf(const char *str, ...);
 
 #endif
